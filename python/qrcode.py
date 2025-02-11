@@ -12,7 +12,7 @@ def gerar_payload_pix(chave_pix, valor, descricao):
     crc = calcular_crc(payload)
     return payload + crc
 
-# Função para calcular o CRC16
+# Função para calcular o CRC16 0
 def calcular_crc(payload):
     crc = 0xFFFF
     for byte in payload.encode('utf-8'):

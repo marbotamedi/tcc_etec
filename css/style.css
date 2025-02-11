@@ -1,0 +1,402 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.menu-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.menu-item:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  gap: 50px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.date img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+.user img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.item-aviso {
+  margin-left: 20px;
+  display: none;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+}
+.img-lupa {
+  transform: translate();
+}
+
+.formularioEstoque{
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+
+/*------------------------------- Menu suspenso -----------------------------------------*/
+.user {
+  position: relative;
+  flex-direction: row;
+}
+
+/* Ajuste para a imagem manter o tamanho original */
+.user img {
+  width: auto;
+  height: auto;
+  max-width: 50px; /* Limita o tamanho máximo da imagem, mas mantendo o tamanho original */
+  max-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Menu suspenso que ficará oculto */
+.dropdown-menu {
+  display: none; /* Começa oculto */
+  position: absolute;
+  flex-direction: column;
+  top: 60px; /* Ajuste da posição para não cobrir a imagem */
+  left: -65px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 10;
+  gap: 10px;
+  min-width: 150px; /* Define uma largura mínima */
+}
+.hover-1{
+  text-decoration: none;
+  color:black;
+  transition: 0.3 ease-out;
+  border-radius: 5px;
+}
+
+.hover-1:hover{
+  background-color: #d2670948;
+  transition: 0.5s;
+}
+
+.span01 {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+
+
+.conteudo01{
+  margin-left: 350px;
+}
+
+
+
+/*hover do botao enviar (pesquisa produtos) */
+/*--------------------------------------------------------------------------------------*/
+
+
+/* Estilo base para o botão de pesquisa */
+.btn-pesquisa {
+  border-radius: 10px; /* Bordas arredondadas */
+  transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+  padding: 8px 16px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #fff; /* Cor do texto */
+  background-color: #0ee72796; /* Cor de fundo */
+  border: none; /* Borda sutil */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+
+.btn-clear1{
+  border-radius: 10px; /* Bordas arredondadas */
+  transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+  padding: 8px 16px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #fff; /* Cor do texto */
+  background-color: #cb0f0f; /* Cor de fundo */
+  border: none;
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn-pesquisa:hover {
+  background-color: #16d209; /* Cor de fundo ao passar o mouse */
+  opacity: 0.8; /* Redução da opacidade para 80% */
+  box-shadow: 0 4px 8px rgb(34, 133, 29); /* Sombra suave */
+}
+.btn-clear1{
+  background-color: #f00b0b91; /* Cor de fundo ao passar o mouse */
+  opacity: 0.8; /* Redução da opacidade para 80% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.btn-clear1:hover{
+  background-color: #b91414; /* Cor de fundo ao passar o mouse */
+  opacity: 0.8; /* Redução da opacidade para 80% */
+  box-shadow: 0 4px 8px rgb(182, 15, 15); /* Sombra suave */
+}
+
+/* Estilo para a barra de pesquisa */
+.pesquisa {
+  width: 250px;
+  border-radius: 10px;
+  height: 35px; /* Altura um pouco maior */
+  border: 1px solid #ccc; /* Borda sutil */
+  background-color: #f9f9f9; /* Cor de fundo mais clara */
+  padding: 0 10px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  transition: all 0.3s ease; /* Transição suave */
+  outline: none; /* Remove o contorno padrão ao focar */
+}
+
+/* Efeito ao focar na barra de pesquisa */
+.pesquisa:focus {
+  border-color: #d26709; /* Cor da borda ao focar */
+  box-shadow: 0 0 8px rgba(210, 103, 9, 0.3); /* Sombra suave ao focar */
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*subi o container do aviso para cima*/
+.header-aviso{ 
+  margin-top: -35px;
+  margin-right: 55px;
+}
+
+
+/*BOTOES DE CADASTRO DE CLIENTE/PRODUTO */
+
+.botoes-Container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 300px;
+  height: 80px;
+
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(137, 137, 137);
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color:#d26709
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+.header-botoes{
+  border-style: solid;
+  border-color: #333;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 50px;
+  border-width: 5px;
+}
+
+.centralizarImg{
+  display: grid;
+  justify-content: center;
+  transform: translateY(300%);
+}
+
+
+/* Media query para telas pequenas (máximo de 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu-item {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .date,
+  .user {
+    font-size: 12px;
+  }
+
+  .main {
+   padding: 10px;
+   
+  }
+
+  .botoes-Container{
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+  
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(137, 137, 137);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color:#d26709
+  }
+  
+
+  .titulo {
+    display: block;
+    gap: 0;
+  }
+
+  .item-aviso {
+    display: none;
+  }
+
+  .dropdown-menu {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .menu-item {
+    font-size: 12px;
+  }
+
+  .user img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+}

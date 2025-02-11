@@ -1,0 +1,26 @@
+.graficos {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para o gráfico inferior */
+    gap: 10px; /* Espaçamento entre os gráficos */
+}
+
+.grafico01,
+.grafico02 {
+    flex: 1 1 calc(50% - 10px); /* Ocupa 50% da largura menos o espaçamento */
+}
+
+.grafico03 {
+    flex: 1 1 100%; /* Ocupa 100% da largura */
+}
+
+.grafico01 img,
+.grafico02 img,
+.grafico03 img {
+    width: 100%; /* Imagens ocupam toda a largura da div */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+.graficos img {
+    border: 1px solid #ccc; /* Exemplo de borda para destaque */
+    border-radius: 5px; /* Arredonda os cantos */
+}

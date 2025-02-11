@@ -1,0 +1,118 @@
+/* Estilo Geral */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: linear-gradient(145deg, #ff7e29, #ff5500); /* Gradiente suave e sofisticado */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Container do Formulário de Login */
+.container {
+    background: #fff;
+    width: 380px;
+    max-width: 100%;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); /* Sombra suave e moderna */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Título */
+h1 {
+    color: #c8500a; /* Laranja vibrante */
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo dos Inputs */
+input {
+    padding: 14px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    border: 2px solid #e76f51; /* Borda suave e discreta */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff7e29;
+    background-color: #fff;
+}
+
+/* Botão de Login */
+button {
+    background: linear-gradient(90deg, #ff7e29, #ff5500); /* Gradiente laranja profissional */
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff5500, #ff7e29); /* Alteração de gradiente no hover */
+}
+
+/* Links */
+a {
+    color: #8e44ad;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c8500a;
+}
+
+/* Animação de Hover no Container */
+.container:hover {
+    transform: translateY(-8px); /* Elevação do container ao passar o mouse */
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15); /* Sombra mais profunda no hover */
+    border: 2px solid #ff7e29; /* Borda visível em laranja */
+}
+
+/* Responsividade: Tela pequena */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
